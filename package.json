@@ -1,0 +1,20 @@
+{
+  "name": "salary-searcher",
+  "version": "1.0.0",
+  "description": "More to come on this amazing salary search web app that scrapes through a publicly available excel sheet on posted salaries for different positions across NYC! Much wow!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelodonnell18/salary-searcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelodonnell18/salary-searcher/issues"
+  },
+  "homepage": "https://github.com/michaelodonnell18/salary-searcher#readme"
+}
