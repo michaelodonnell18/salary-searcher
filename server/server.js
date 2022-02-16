@@ -8,8 +8,8 @@ app.use(express.static('/', )); //to serve all static files from /client/assets 
 //when requests are made to /inputs.csv, parsing through each request to receive filtered csv data
 //let's try and just console.log csv file first to get it to render
 
-//serving static files from root
-app.use(express.static('./inputs.csv')); //allows us to use assets images and stuff here in the server
+//serve csv file from route/api folder - do we need to parse this to get a display and see some of the csv file displayed?
+app.use('/api/inputs.csv', require('./routes/api/inputs.csv')); 
 
 app.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
