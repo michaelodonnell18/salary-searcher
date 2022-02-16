@@ -1,9 +1,10 @@
 {
   "name": "salary-searcher",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Basic salary search filter tool that takes in a CSV file of over 64k entries to filter out for popular searches. More to come on this soon!",
   "main": "fileparser.js",
   "scripts": {
+    "start": "nodemon ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

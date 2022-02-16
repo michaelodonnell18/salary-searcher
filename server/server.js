@@ -4,53 +4,34 @@ const CSVToArray = require('./parser.js');
 
 const app = express();
 const PORT = 3000;
-app.use(express.static('/', )); //to serve all static files from /client/assets dir 
-//when requests are made to /inputs.csv, parsing through each request to receive filtered csv data
-//let's try and just console.log csv file first to get it to render
+const fs = require('fs');
 
-//serve csv file from route/api folder - do we need to parse this to get a display and see some of the csv file displayed?
-app.use('/api/inputs.csv', require('./routes/api/inputs.csv')); 
+fs.readFile('../Inputs.csv', 'utf8' , (err, data) => { 
+  if (err) {
+    console.error(err)
+    return
+  }
+  console.log(data)
+});
 
+//we need the server to send the frontend piece - when the server loads, it sends the frontend a
+//parsed array of the data we're sending over
 app.get('/', (req, res, next) => {
-  res.sendFile(path.join(__dirname, '../client/index.html'));
+  res.sendFile(path.join(__dirname, '../Inputs.csv'));
   //response must include: content-type: text/html; charset=UTF-8 and a response code of 200
   // next(new Error);
 });
-
-
-/* handle parsing request body */
-
 
 /**
  * handle requests for static files
  */
 
-
-/**
- * define route handlers
- */
-
 // route handler to respond with main app
-
-
 
 /**
  * configire express global error handler
  * @see https://expressjs.com/en/guide/error-handling.html#writing-error-handlers
  */
-
-//error handling for asynchronous code
-// app.get('/', function (req, res, next) {
-//   fs.readFile('/file-does-not-exist', function (err, data) {
-//     if (err) {
-//       next(err) // Pass errors to Express.
-//     } else {
-//       res.send(data); //otherwise pass the data into server
-//     }
-//   });
-// });
-// http://localhost:3000/nothandlingthis
-
 
 // catch-all route handler for any requests to an unknown route
 
