@@ -24,6 +24,7 @@ app.get('/', (req, res, next) => {
 
 /**
  * handle requests for static files
+ * none needed here as we're pulling from a CSV file
  */
 
 // route handler to respond with main app
